@@ -16,4 +16,4 @@ build
 gradle
 gradlew.bat
 .idea/gradle.xml
-
+.idea/*

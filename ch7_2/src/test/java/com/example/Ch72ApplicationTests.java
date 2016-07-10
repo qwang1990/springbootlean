@@ -1,5 +1,5 @@
-package com.example;
-
+//package com.example;
+/**
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.SpringApplicationConfiguration;
@@ -15,4 +15,4 @@ public class Ch72ApplicationTests {
 	public void contextLoads() {
 	}
 
-}
+}*/

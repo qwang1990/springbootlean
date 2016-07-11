@@ -17,6 +17,7 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter{
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/wang").setViewName("wang");
+        registry.addViewController("/ws").setViewName("/ws");
     }
 
     @Bean

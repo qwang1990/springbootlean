@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="utf-8" />
+<head>
+    <title>Home</title>
+    <script th:src="@{sockjs.min.js}"></script>
+    <script th:src="@{stomp.min.js}"></script>
+    <script th:src="@{jquery.js}"></script>
+</head>
+
+<body>
+<p>
+    聊天室
+</p>
+
+<form id="wiselyForm">
+    <textarea name="text" cols="60" rows="4"></textarea>
+    <input type="submit" />
+</form>
+
+<button id="stop">停止</button>
+
+<script th:inline="javascript">
+    $('#wiselyForm').submit(function(e){
+        e.preventDefault();
+        var text = $('#wiselyForm').find('textarea[name="text"]').val();
+        sendSpittle(text);
+    })
+
+    var sock = new SockJS("/endpointChat");
+    var stomp = Stomp.over(sock);
+    stomp.connect('guest','guest',function(frame){
+        stomp.subscribe("/user/queue/notifications",handleNotification);
+    });
+
+
+    function handleNotification(message) {
+        $('#output').append("<b>Received: "+message.body+"</b><br/>")
+    }
+
+    function sendSpittle(text) {
+        console.log(text);
+        stomp.send("/chat",{},text);
+    }
+
+    $('#stop').click(function() {sock.close()});
+
+</script>
+
+<div id="output"></div>
+
+</body>
+</html>

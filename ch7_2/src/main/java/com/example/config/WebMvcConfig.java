@@ -18,6 +18,8 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter{
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/wang").setViewName("wang");
         registry.addViewController("/ws").setViewName("/ws");
+        registry.addViewController("/login").setViewName("/login");
+        registry.addViewController("/chat").setViewName("/chat");
     }
 
     @Bean

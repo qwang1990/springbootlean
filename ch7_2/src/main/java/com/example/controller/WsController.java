@@ -13,7 +13,7 @@ import org.springframework.stereotype.Controller;
 public class WsController {
 
     @MessageMapping("/welcome")
-    @SendTo("/topic/getResponses")
+    @SendTo("/topic/getResponse")
     public WiselyResponse say(WiselyMessage message) throws InterruptedException {
         Thread.sleep(3000);
         return new WiselyResponse("Welcome, "+message.getName()+"!");

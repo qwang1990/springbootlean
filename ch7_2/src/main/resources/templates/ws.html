@@ -20,8 +20,8 @@
     </div>
 </div>
 <!--<script src="http://cdn.bootcss.com/stomp.js/2.3.3/stomp.js"></script>-->
-<script src="//cdn.jsdelivr.net/sockjs/1/sockjs.min.js"></script>
-<!--<script th:src="@{sockjs.min.js}"></script>-->
+<!--<script src="http://cdn.jsdelivr.net/sockjs/1/sockjs.min.js"></script>-->
+<script th:src="@{sockjs.min.js}"></script>
 <script th:src="@{stomp.min.js}"></script>
 <script th:src="@{jquery.js}"></script>
 <script type="text/javascript">
@@ -35,12 +35,12 @@
     }
 
     function connect() {
-        var socket = new SocketJS('/endpointWisely');
+        var socket = new SockJS('/endpointWisely');
         stompClient = Stomp.over(socket);
         stompClient.connect({ },function(frame) {
             setConnected(true);
             console.log('connected: '+frame);
-            stompClient.subscribe('/top/getResponse',function(response) {
+            stompClient.subscribe('/topic/getResponse',function(response) {
                 showResponse(JSON.parse(response.body).responseMessage);
             })
         })

@@ -19,6 +19,7 @@ public class WebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer{
 
     @Override
     public void configureMessageBroker(MessageBrokerRegistry registry) {
+        //不知道有啥用...
         registry.enableSimpleBroker("/topic");
     }
 }

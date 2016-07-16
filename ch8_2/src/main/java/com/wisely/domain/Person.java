@@ -1,9 +1,9 @@
 package com.wisely.domain;
 
-import org.springframework.data.annotation.Id;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.NamedQuery;
 
 /**
@@ -17,7 +17,7 @@ public class Person {
     @GeneratedValue
     private Long id;
 
-    private String name; 
+    private String name;
 
     private Integer age;
 

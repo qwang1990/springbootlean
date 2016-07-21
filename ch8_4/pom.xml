@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.wisely</groupId>
-	<artifactId>ch8_3</artifactId>
+	<artifactId>ch8_4</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>ch8_3</name>
+	<name>ch8_4</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
@@ -27,15 +27,11 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-rest</artifactId>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
 		<dependency>
@@ -55,6 +51,7 @@
 			<artifactId>guava</artifactId>
 			<version>19.0</version>
 		</dependency>
+
 	</dependencies>
 
 	<build>

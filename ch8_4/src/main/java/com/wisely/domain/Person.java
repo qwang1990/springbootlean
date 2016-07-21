@@ -1,11 +1,12 @@
 package com.wisely.domain;
 
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
- * Created by wangqi on 16/7/17.
+ * Created by wangqi on 16/7/21.
  */
 @Entity
 public class Person {
@@ -22,8 +23,7 @@ public class Person {
     public Person() {
     }
 
-    public Person(Long id, String name, Integer age, String address) {
-        this.id = id;
+    public Person(String name, Integer age, String address) {
         this.name = name;
         this.age = age;
         this.address = address;

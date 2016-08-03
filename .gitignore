@@ -18,3 +18,5 @@ gradlew.bat
 .idea/gradle.xml
 .idea/**
 .gradle/**
+**.iml
+SourceCode

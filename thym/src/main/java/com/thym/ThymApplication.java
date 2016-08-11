@@ -1,3 +1,4 @@
+/*
 package com.thym;
 
 import org.springframework.boot.SpringApplication;
@@ -10,3 +11,4 @@ public class ThymApplication {
 		SpringApplication.run(ThymApplication.class, args);
 	}
 }
+*/
